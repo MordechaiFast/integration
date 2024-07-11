@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=67.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "page-tracker"
+version = "1.0.0"
+dependencies = [
+    "Flask",
+    "redis",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-timeout",
+    "requests",
+    "ruff",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "S101",
+    "ANN",
+    "D",
+    "PLR2004",
+    "INP001",
+]
