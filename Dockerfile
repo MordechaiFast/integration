@@ -41,5 +41,5 @@ RUN python -m pip install --upgrade pip setuptools &&\
 
 ENV REDIS_URL=redis://172.17.0.1:6379
 
-CMD ["flask", "--app" "page_tracker.app", "run", \
+CMD ["flask", "--app", "page_tracker.app", "run", \
      "--host", "0.0.0.0", "--port", "5000"]
